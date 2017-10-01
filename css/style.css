@@ -1,0 +1,63 @@
+body {}
+
+.container{}
+
+.nav-bar-container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-bar-header {
+  align-self: flex-start;
+}
+
+.nav-bar-ul {
+  display: flex;
+  list-style-type: none;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.nav-bar-items {}
+
+.sections {}
+
+.sections-nav {}
+
+h1 {}
+
+.about {}
+
+.about-h1 {}
+
+.about-p {}
+
+.projects {}
+
+.projects-h1 {}
+
+.projects-nav {}
+
+.project-images {}
+
+.contact {}
+
+.contact-h1 {}
+
+.contact-form {}
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
