@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+
+body {
+ font-family: 'Roboto', sans-serif;
+ display: flex;
+ justify-content: center;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1;
+}
+
+.twitchTitle {
+  font-size: 100px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 20px;
+  color: #6441a4;
+}
+
+.filterButtons {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.allStreamers, .onlineStreamers {
+  font-size: 40px;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+.allStreamers:focus, .onlineStreamers:focus {
+  outline: none;
+}
+
+.allStreamers {
+  margin-right: 5px;
+}
+
+.menuButtonSelected {
+  background-color: #fff;
+  border: none;
+  border-bottom-color: #6441a4;
+  border-bottom-style: solid;
+  border-bottom-width: 7px;
+  text-decoration: none;
+}
+
+.menuButtonSelected:focus {
+  outline: none;
+}
+
+.menuButtonNotSelected {
+  cursor: pointer;
+}
+
+.streamerDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 270px;
+  width: 80%;
+  margin-top: 270px;
+}
+
+.streamerList {
+  display: flex;
+  flex-direction: inline-flex;
+  margin-bottom: 5px;
+}
+
+.streamerLogoLi {
+  margin-right: 15px;
+}
+
+.streamerLogo {
+  max-height: 275px;
+  max-width: 275px;
+}
+
+.streamerInfoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.streamerName {
+  margin-top: 15px;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.streamerOnlineStatus {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 200;
+  margin-top: 0px;
+}
+
+.streamerStatus {
+  text-decoration: none;
+  color: green;
+}
+
+.streamerStatus:hover {
+  font-weight: bolder;
+}
+
+.statusOnlineIcon {
+  margin-right: 2px;
+  color: green;
+  font-size: 50px;
+}
+
+.statusOfflineIcon {
+  margin-right: 5px;
+  color: red;
+  font-size: 50px;
+}
+
+.moreInfoButton {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.moreInfoArrow {
+  font-size: 65px;
+}
+
+.moreInfoArrowRotateUp {
+  -webkit-transform: rotate(180deg);
+  -moz-transform:rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.moreInfoArrowRotateDown {
+  -webkit-transform: rotate(0deg);
+  -moz-transform:rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.moreInfoAboutStreamersDiv {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.moreInfoSlideUp, .moreInfoSlideDown {
+  max-height: 0;
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  -moz-transition: max-height 0.5s ease-in-out;
+  -o-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.moreInfoSlideDown {
+  max-height: 500px;
+}
+
+.moreInfoAboutStreamersUL {
+  background-color: #fcfcfc;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+b {
+  font-weight: bold;
+}
+
+.streamerBio {
+
+}
+
+/* Responsive Design */
+
+@media only screen and (min-width: 1000px) {
+
+  .twitchTitle {
+    font-size: 75px;
+  }
+
+  .allStreamers, .onlineStreamers {
+    font-size: 25px;
+  }
+
+  .allStreamers {
+    margin-right: 20px;
+  }
+
+  .streamerDiv {
+    margin-top: 215px;
+    width: 65%;
+  }
+
+  .streamerName {
+    font-size: 50px;
+  }
+
+  .streamerOnlineStatus {
+    font-size: 30px;
+  }
+
+  .moreInfoButton {
+    font-size: 25px;
+  }
+
+  .moreInfoAboutStreamersUL {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 1750px) {
+
+  .streamerDiv {
+    margin-top: 230px;
+  }
+
+}

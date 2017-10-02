@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>Twitchtv App</title>
+
+
+  <!-- CSS -->
+  <link href="reset.css" rel="stylesheet" type="text/css"  />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" type="text/css"  />
+</header>
+
+<body>
+  <div class="menu">
+    <h1 class="twitchTitle">twitchApp</h1>
+
+    <div class=filterButtons>
+      <button class="allStreamers menuButtonSelected" onclick="display.allStreamers();">All Streamers</button>
+      <button class="onlineStreamers menuButtonNotSelected" onclick="display.onlineStreamers();">Online Streamers</button>
+      <!-- <button class="offlineStreamers" onclick="display.offlineStreamers();">Offline Streamers</button> -->
+    </div>
+  </div>
+
+  <div class="streamerDiv"></div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

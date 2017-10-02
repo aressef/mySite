@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400');
+
+body {
+  font-family: Catamaran;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  padding-bottom: 30px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-top: 40px;
+  font-weight: 200;
+}
+
+.searchBar {
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.search {
+  margin-right: 5px;
+}
+
+.randomSearch {
+  margin-left: 5px;
+}
+
+.resultContainer {
+  margin: auto;
+  width: 80%;
+  font-weight: 100;
+}
+
+.searchResultLink {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+.searchResultLink:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.indResult {
+  margin-bottom: 10px;
+}
+
+.indResult:hover {
+  padding: 0px;
+  border-left: solid;
+  border-width: medium;
+  border-color:#000;
+}
+
+.indResult:hover .title {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.indResult:hover .snippet {
+  font-size: 22px;
+  font-weight: 200;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.snippet {
+  font-size: 20px;
+}

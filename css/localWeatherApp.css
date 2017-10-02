@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400');
+
+
+/* CSS file for Local Weather App  */
+html, body {
+  height: 85%;
+  margin: 0;
+}
+
+ body {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: -ms-center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: #0097A7;
+  color: #212121;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  color: #FFF;
+  font-weight: 100;
+  padding-top:60px;
+}
+
+.weatherBox {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+
+  background: #B2EBF2;
+  border-radius: 2px;
+  margin: 1rem;
+  position: relative;
+  min-height: 365px;
+  width: 350px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#city {
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+#weather, #temp {
+  font-size: 22px;
+  margin-bottom: 3px
+}
+
+#weatherIcon {
+  margin-bottom: 5px;
+}
+
+#temp {
+  margin-top: 0px;
+}
+
+.tempTypes {
+  font-weight:300;
+}
+
+.tempToggle {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: -ms-row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  align-items: -ms-center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.tempTypes:first-of-type {
+  padding-right: 7px;
+}
+
+.tempTypes {
+  padding: 5px;
+}
+
+
+input[type='checkbox'] {
+  display: none;
+}
+input[type='checkbox']:checked ~ .toggle {
+  background: #0097A7;
+  left: 26px;
+  transition: .5s;
+}
+input[type='checkbox']:checked ~ .switch {
+  background: #00BCD4;
+  transition: .5s;
+}
+
+.switch {
+  display: block;
+  width: 45px;
+  height: 18px;
+  background: #939393;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  transition: .5s;
+}
+
+.toggle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: .5s;
+}
+
+.card {
+  display: inline-block;
+  margin: 9px;
+  margin: 5px;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.credit {
+  font-size: 12px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 374px) {
+  h1 {
+    padding-top: 150px;
+  }
+
+  .weatherBox {
+    width: 300px
+  }
+}

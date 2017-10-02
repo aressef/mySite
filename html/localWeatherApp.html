@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Local Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <h1>Local Weather App</h1>
+  <div class="weatherBox">
+
+    <p id="city"></p>
+    <p id="weather"></p>
+    <img src="" alt="" id="weatherIcon" width="150px" height="150px"/>
+    <p id="temp"></p>
+
+    <!-- Toggle Switch -->
+    <div class="tempToggle">
+      <p class="tempTypes">&#8457;</p>
+      <div class="card">
+        <label for="switch1">
+        <input type="checkbox" id="switch1" onclick="functions.toggleTemp()"/><span class="switch"></span><span class="toggle"></span>
+        </label>
+      </div>
+      <p class="tempTypes">&#8451;</p>
+    </div>
+
+  </div>
+  <p class="credit">by <a href="https://codepen.io/aressef/">Ryan Fuhrman</a></p>
+  <!-- JavaScript links -->
+  <script src='main.js'></script>
+</body>
+
+</html>
