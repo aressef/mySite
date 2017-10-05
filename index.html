@@ -7,6 +7,7 @@
   <title>Ryan Fuhrman</title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -30,73 +31,32 @@
     </ul>
   </div>
 
-  <div class="container main-container">
+  <div class="sections-nav-div container">
+    <ul class="row nav sections-nav">
+      <li class="nav-item sections-nav-items col">
+        <a class="fa fa-user js-sections-link about-link" href="#"> About</a>
+      </li>
+      <li class="nav-item sections-nav-items col">
+        <a class="fa fa-folder js-sections-link projects-link" href="#"> Projects</a>
+      </li>
+      <li class="nav-item sections-nav-items col">
+        <a class="fa fa-send js-sections-link contact-link" href="#"> Contact</a>
+      </li>
+    </ul>
+  </div>
 
-    <div class="container sections">
-      <ul class="row nav sections-nav">
-        <li class="nav-item sections-nav-items col">
-          <a class="fa fa-user js-sections-link about-me" href="#"> About</a>
-        </li>
-        <li class="nav-item sections-nav-items col">
-          <a class="fa fa-folder js-sections-link projects" href="#"> Projects</a>
-        </li>
-        <li class="nav-item sections-nav-items col contact">
-          <a class="fa fa-send js-sections-link contact" href="#"> Contact</a>
-        </li>
-      </ul>
-    </div>
+  <!-- These sections (about, projects, contact) will be displayed via AJAX -->
 
-    <!-- These sections (about, projects, contact) will be displayed via AJAX -->
+  <div class="js-section section-displayed-div container">
 
-    <div class="js-section">
-
-    </div>
-
-    <!-- <div class="about">
+    <div class="about">
       <h1 class="about-h1">About</h1>
       <p class="about-p">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo magna, consequat sed gravida a, iaculis non massa. In hac habitasse platea dictumst. Proin arcu ex, dapibus at lectus quis, dignissim mollis urna. Nam vehicula dolor nec ipsum eleifend, vel suscipit urna viverra.
       </p>
     </div>
 
-    <div class="projects">
-      <h1 class="projects-h1">Projects</h1>
-      <ul class="nav projects-nav">
-        <li class="nav-item">
-          <a href="#"><img class="card-img project-images" src="img/twitchApp.png" alt="Twitch App">twitchApp</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"><img class="card-img project-images" src="img/wikipediaViewer.png" alt="Wikipedia Veiwer">wikipediaViewer</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"><img class="card-img project-images" src="img/localWeatherApp.png" alt="Local Weather App">localWeatherApp</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"><img class="card-img project-images" src="img/randomQuoteGenerator.png" alt="Random Quote Generator">randomQuoteGenerator</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="contact">
-      <h1 class="contact-h1">Contact</h1>
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
-        </div>
-        <div class="form-group">
-          <label for="email-address">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="comments">Comments</label>
-          <textarea type="text" class="form-control" id="exampleInputPassword1" rows="3" placeholder="What would you like to tell me?"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-      </form>
-    </div> -->
-
-  </div>
+</div>
 
   <script type="text/javascript" src="js/main.js">
 
