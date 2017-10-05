@@ -6,10 +6,7 @@ var ajaxCall = function (section, file) {
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        // console.log(xhr.responseText);
         var sectionDivHTML = document.createRange().createContextualFragment(xhr.responseText);
-        // sectionDivHTML = xhr.responseText;
-        // console.log(sectionDivHTML);
         section(sectionDivHTML);
       } else {
         console.log('Error: ' + xhr.status);
@@ -54,12 +51,12 @@ var sectionLinkClicked = document.querySelectorAll('.js-sections-link');
 for (var i = 0; i < sectionLinkClicked.length; i++) {
   sectionLinkClicked[i].addEventListener('click', function() {
 
-    if (this.classList.contains('about-me')) {
-      ajaxCall(sections.about, 'about.html');
-    } else if (this.classList.contains('projects')) {
-      ajaxCall(sections.projects, 'projects.html');
-    } else if (this.classList.contains('contact')) {
-      ajaxCall(sections.contact, 'contact.html');
+    if (this.classList.contains('about-link')) {
+      ajaxCall(sections.about, 'html/about.html');
+    } else if (this.classList.contains('projects-link')) {
+      ajaxCall(sections.projects, 'html/projects.html');
+    } else if (this.classList.contains('contact-link')) {
+      ajaxCall(sections.contact, 'html/contact.html');
     }
 
   });
