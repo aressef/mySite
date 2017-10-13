@@ -54,10 +54,18 @@ for (var i = 0; i < sectionLinkClicked.length; i++) {
     if (this.classList.contains('about-link')) {
       ajaxCall(sections.about, 'html/about.html');
     } else if (this.classList.contains('projects-link')) {
-      ajaxCall(sections.projects, 'html/projects.html');
+      ajaxCall(sections.projects, 'html/projects-small-and-med.html');
     } else if (this.classList.contains('contact-link')) {
       ajaxCall(sections.contact, 'html/contact.html');
     }
 
   });
+}
+
+
+var projectsUL = document.querySelector('js-projects-ul');
+console.log(projectsUL);
+
+if (screen.availWidth > 991) {
+
 }
