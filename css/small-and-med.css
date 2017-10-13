@@ -29,7 +29,7 @@ body {
 .nav-bar-header {
   font-family: 'Rock Salt', cursive;
   font-size: 25px;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .nav-bar-ul {
@@ -157,11 +157,7 @@ hr {
   height: 70vh;
 }
 
-
-/*// Small devices (landscape phones, 576px and up)*/
-@media screen and (min-width: 576px) { }
-
-/*// Medium devices (tablets, 768px and up)*/
+/* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
   .nav-bar-container {
@@ -170,7 +166,7 @@ hr {
 
   .nav-bar-header {
     font-size: 40px;
-    padding-left: 30px;
+    margin-left: 30px;
   }
 
   .nav-bar-ul {
@@ -202,8 +198,8 @@ hr {
 
 }
 
-/*// Large devices (desktops, 992px and up)
+/* Large devices (desktops, 992px and up)
 @media screen and (min-width: 992px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
+Extra large devices (large desktops, 1200px and up)
 @media screen and (min-width: 1200px) { ... }*/
