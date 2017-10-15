@@ -14,7 +14,7 @@ var functions = {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
 
-    var pathWithCurrentLocal = 'https://weather.millergeek.xyz/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&APPID=31405be1fb8f6e7f0bb74137ccb08125';
+    var pathWithCurrentLocal = 'https://fcc-weather-api.glitch.me/api/current?lat=' + latitude + '&lon=' + longitude + '&APPID=31405be1fb8f6e7f0bb74137ccb08125';
 
     ajaxRequest(pathWithCurrentLocal, function(data){
       var lat = data.coord.lat;
@@ -27,8 +27,8 @@ var functions = {
       var getWeatherUpperCase = functions.toTitleCase(getWeather);
 
       // Converting Weather from Kelvin to Fahrenheit and Celsius
-      var fahrenheitConverter = Math.round((getTemp * (9/5) - 459.67) * 100) / 100;
-      var celsiusConverter = Math.round((getTemp - 273.15) * 100) / 100;
+      var fahrenheitConverter = Math.round(getTemp * (9/5) + 32);
+      var celsiusConverter = Math.round(getTemp);
       fahrenheit = fahrenheitConverter;
       celsius = celsiusConverter;
 
@@ -40,29 +40,6 @@ var functions = {
 
 
       console.log(getWeatherUpperCase);
-
-      // var offset = new Date().getTimezoneOffset();
-      // console.log(offset);
-      // var sec = sunset;
-      // console.log (sunset, sec);
-      // var date = new Date(sec * 1000);
-      // var timestr = date.toLocaleTimeString();
-      // var cleanTime = timestr.replace(/:\d+ /, ' ');
-      // console.log(cleanTime);
-      // console.log(date, timestr);
-
-      // var cap = {};
-      // var split = getWeather.split(' ');
-      //
-      // for (var i = 0; i < split.length; i++) {
-      //   for (var j = 0; j < split[i].length; j++) {
-      //     cap[i] = split[i][0].toUpperCase();
-      //   }
-      //   split[i][0] = cap[i][0];
-      //   console.log(split);
-      // }
-      //
-      // console.log(cap);
 
       functions.getWeatherIcon();
     });
@@ -106,13 +83,16 @@ var functions = {
         image = 'img/weather-showers-night.png';
         break;
       case "Light Rain":
+      case "Mist":
         image = 'img/weather-rain-night.png';
         break;
       case "Snow":
         image = 'img/weather-snow.png';
         break;
       case "Stormy":
-      case "Thunderstorm":
+      case "Thunderstroms":
+      //case "thunderstorm" //night:
+      //  image = 'img/weather-storm-night.png';
         image = 'img/weather-storm.png'
         break;
       default:

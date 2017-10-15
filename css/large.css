@@ -71,7 +71,8 @@ body {
 }
 
 .about-h1 {
-    font-size: 12vmin;
+    font-size: 8vmin;
+    font-weight: 300;
 }
 
 .about-p {
@@ -84,8 +85,27 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: space-between;
+    height: 70vh;
+}
+
+.projects-h1 {
+    font-size: 7vmin;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .projects-li {
     margin-bottom: 10px;
+}
+
+.project-name {
+    font-weight: 300;
+}
+
+.contact-h1 {
+    font-size: 8vmin;
+}
+
+.contact-form {
+    font-size: 4vmin;
 }
