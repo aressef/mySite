@@ -1,5 +1,6 @@
 var xhr = new XMLHttpRequest();
 var sectionDiv = document.querySelector('.js-section');
+var isProjectsSelected;
 
 // AJAX request for sections html
 var ajaxCall = function (section, file) {
@@ -8,6 +9,7 @@ var ajaxCall = function (section, file) {
       if (xhr.status === 200) {
         var sectionDivHTML = document.createRange().createContextualFragment(xhr.responseText);
         section(sectionDivHTML);
+        isProjectsSelected = sectionDiv.firstElementChild;
       } else {
         console.log('Error: ' + xhr.status);
       }
@@ -54,7 +56,11 @@ for (var i = 0; i < sectionLinkClicked.length; i++) {
     if (this.classList.contains('about-link')) {
       ajaxCall(sections.about, 'html/about.html');
     } else if (this.classList.contains('projects-link')) {
-      ajaxCall(sections.projects, 'html/projects-large.html');
+      if (window.innerWidth > 991) {
+        ajaxCall(sections.projects, 'html/projects-large.html')
+      } else {
+        ajaxCall(sections.projects, 'html/projects-small-and-med.html');
+      }
     } else if (this.classList.contains('contact-link')) {
       ajaxCall(sections.contact, 'html/contact.html');
     }
@@ -62,10 +68,15 @@ for (var i = 0; i < sectionLinkClicked.length; i++) {
   });
 }
 
+var loadProjectPageByScreenSize = function() {
+  if (isProjectsSelected != undefined) {
+    if (window.innerWidth > 991 && isProjectsSelected.classList.contains('projects')) {
+      ajaxCall(sections.projects, 'html/projects-large.html')
+    } else {
+      ajaxCall(sections.projects, 'html/projects-small-and-med.html');
+    }
+  }
+};
 
-var projectsUL = document.querySelector('js-projects-ul');
-console.log(projectsUL);
+window.addEventListener('resize', loadProjectPageByScreenSize, false);
 
-if (screen.availWidth > 991) {
-
-}

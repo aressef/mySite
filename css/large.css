@@ -20,14 +20,15 @@ body {
     top: 0;
     position: fixed;
     background-color: #f4f4f4;
-    height: 50px;
+    height: 40px;
     width: 100%;
     padding-top: 5px;
+    z-index: 1;
 }
   
 .nav-bar-header {
     font-family: 'Rock Salt', cursive;
-    font-size: 28px;
+    font-size: 22px;
     margin-left: 30px;
 }
 
@@ -102,10 +103,23 @@ body {
     font-weight: 300;
 }
 
+.project-images {
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    height: 70vh;
+}
+
 .contact-h1 {
     font-size: 8vmin;
+    font-weight: 300;
 }
 
 .contact-form {
-    font-size: 4vmin;
+    font-size: 3vmin;
 }

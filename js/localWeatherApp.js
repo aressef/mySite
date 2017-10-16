@@ -66,37 +66,35 @@ var functions = {
       case "Sunny":
       case "Clear Sky":
       case "Clear":
-        image = 'img/weather-clear.png';
+        image = '../img/weatherIcons/weather-clear.png';
         break;
       case "Broken Clouds":
-        image = 'img/weather-haze.png';
+        image = '../img/weatherIcons/weather-haze.png';
         break;
       case "Cloudy":
       case "Overcast Clouds":
-        image = 'img/weather-clouds.png';
+        image = '../img/weatherIcons/weather-clouds.png';
         break;
       case "Few Clouds":
       case "Scattered Clouds":
-        image = 'img/weather-few-clouds.png';
+        image = '../img/weatherIcons/weather-few-clouds.png';
         break;
       case "Rainy":
-        image = 'img/weather-showers-night.png';
+        image = '../img/weatherIcons/weather-showers-night.png';
         break;
       case "Light Rain":
       case "Mist":
-        image = 'img/weather-rain-night.png';
+        image = '../img/weatherIcons/weather-rain-night.png';
         break;
       case "Snow":
-        image = 'img/weather-snow.png';
+        image = '../img/weatherIcons/weather-snow.png';
         break;
       case "Stormy":
       case "Thunderstroms":
-      //case "thunderstorm" //night:
-      //  image = 'img/weather-storm-night.png';
-        image = 'img/weather-storm.png'
+        image = '../img/weatherIcons/weather-storm.png'
         break;
       default:
-        image = 'img/weather-none-available.png';
+        image = '../img/weatherIcons/weather-none-available.png';
         console.log("I can't seem to find the weather.");
     }
     weatherIcon.src = image;
