@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    /* color: #5D6769; */
 }
 
 .main {
@@ -46,6 +47,9 @@ body {
 }
 
 .sections-nav-div {
+    display: flex;
+    align-items: center;
+    height: 100vh;
     width: 25%;
     margin-left: 10%;
   }
@@ -85,14 +89,28 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-between;
-    height: 70vh;
+    top: 0;
+    bottom: 0;
+    position: fixed absolute;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
+
 .projects-h1 {
-    font-size: 7vmin;
+    font-size: 6vmin;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.projects-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects li:first-child {
+    margin-right: 3vw;
 }
 
 .projects-li {
@@ -101,10 +119,13 @@ body {
 
 .project-name {
     font-weight: 300;
+    font-size: 1.2em;
 }
 
-.project-images {
-    box-shadow: 1px 1px 1px 1px #888888;
+.project-vids {
+    box-shadow: 1px 1px 2px 2px #888888;
+    max-height: 35vh;
+    max-width: 35vh;
 }
 
 .contact {

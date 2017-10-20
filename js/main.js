@@ -58,6 +58,7 @@ for (var i = 0; i < sectionLinkClicked.length; i++) {
     } else if (this.classList.contains('projects-link')) {
       if (window.innerWidth > 991) {
         ajaxCall(sections.projects, 'html/projects-large.html')
+        testingTesting();
       } else {
         ajaxCall(sections.projects, 'html/projects-small-and-med.html');
       }
@@ -80,3 +81,23 @@ var loadProjectPageByScreenSize = function() {
 
 window.addEventListener('resize', loadProjectPageByScreenSize, false);
 
+
+function testingTesting() {
+
+  var projectVideos = document.querySelectorAll('.project-vids');
+  console.log(projectVideos);
+
+  for (var i = 0; i < projectVideos.length; i++) {
+
+    projectVideos[i].addEventListener('mouseenter', function() {
+      console.log('play');
+      this.play();
+
+    });
+
+    projectVideos[i].addEventListener('mouseout', function() {
+      console.log('pause');
+      this.pause();
+    })
+  }
+}
