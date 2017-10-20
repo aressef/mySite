@@ -118,7 +118,6 @@ var display = {
       streamerList = document.createElement('ul');
       streamerLogoLi = document.createElement('li');
       streamerLogo = document.createElement('img');
-      streamerInfoDiv = document.createElement('div');
       streamerNameLi = document.createElement('li');
       streamerOnlineStatusLi = document.createElement('li');
       streamerStatus = document.createElement('a');
@@ -135,7 +134,6 @@ var display = {
       streamerList.className = 'streamerList';
       streamerLogoLi.className = 'streamerLogoLi';
       streamerLogo.className = 'streamerLogo';
-      streamerInfoDiv.className = 'streamerInfoDiv'
       streamerNameLi.className = 'streamerName';
       streamerOnlineStatusLi.className = 'streamerOnlineStatus';
       streamerStatus.className = 'streamerStatus';
@@ -184,11 +182,10 @@ var display = {
       streamerDiv.appendChild(streamerList);
       streamerList.appendChild(streamerLogoLi);
       streamerLogoLi.appendChild(streamerLogo);
-      streamerList.appendChild(streamerInfoDiv);
-      streamerInfoDiv.appendChild(streamerNameLi);
-      streamerInfoDiv.appendChild(streamerOnlineStatusLi);
-      streamerInfoDiv.appendChild(moreInfoButton);
-      streamerDiv.appendChild(moreInfoAboutStreamersDiv);
+      streamerList.appendChild(streamerNameLi);
+      streamerList.appendChild(streamerOnlineStatusLi);
+      streamerList.appendChild(moreInfoButton);
+      streamerList.appendChild(moreInfoAboutStreamersDiv);
       moreInfoAboutStreamersDiv.appendChild(moreInfoAboutStreamersUL);
       moreInfoAboutStreamersUL.appendChild(streamerBioLi);
 
@@ -316,13 +313,12 @@ var display = {
   moreInfoSlider: function() {
     var moreInfoButtons = document.getElementsByClassName('moreInfoButton');
     var height;
-
     for (var i = 0; i < moreInfoButtons.length; i++) {
       moreInfoButtons[i].addEventListener('click', function() {
-        height = this.parentNode.parentNode.nextSibling.clientHeight;
+        height = this.nextSibling.clientHeight;
 
-        this.parentNode.parentNode.nextSibling.classList.toggle('moreInfoSlideDown');
-        this.parentNode.parentNode.nextSibling.classList.toggle('moreInfoSlideUp');
+        this.nextSibling.classList.toggle('moreInfoSlideDown');
+        this.nextSibling.classList.toggle('moreInfoSlideUp');
 
         // Animate Arrow
         var arrow = this.lastChild;

@@ -2,8 +2,8 @@
 
 body {
  font-family: 'Roboto', sans-serif;
- display: flex;
- justify-content: center;
+ margin-right: 10px;
+ margin-left: 10px;
 }
 
 .menu {
@@ -63,44 +63,46 @@ body {
 }
 
 .streamerDiv {
-  display: flex;
-  flex-direction: column;
   margin-top: 270px;
-  width: 80%;
-  margin-top: 270px;
+  width: 90%;
+  margin: 270px auto 0 auto;
 }
 
 .streamerList {
-  display: flex;
-  flex-direction: inline-flex;
-  margin-bottom: 5px;
+  display: grid;
+  list-style: none;
+  grid-template:
+    [row1-start] "logo displayName" 100px [row1-end]
+    [row2-start] "logo onlineStatus" auto [row2-end]
+    [row3-start] "logo moreInfoButton" auto [row3-end]
+    [row4-start] "moreInfo moreInfo" auto [row4-end]
+    / 35% auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
 }
 
 .streamerLogoLi {
-  margin-right: 15px;
+  grid-area: logo;
 }
 
 .streamerLogo {
-  max-height: 275px;
-  max-width: 275px;
-}
-
-.streamerInfoDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
 .streamerName {
+  grid-area: displayName;
   margin-top: 15px;
-  font-size: 60px;
+  font-size: 75px;
   font-weight: 300;
 }
 
 .streamerOnlineStatus {
   display: flex;
   align-items: center;
-  font-size: 40px;
+  grid-area: onlineStatus;
+  font-size: 50px;
   font-weight: 200;
   margin-top: 0px;
 }
@@ -127,9 +129,10 @@ body {
 }
 
 .moreInfoButton {
+  grid-area: moreInfoButton;
   display: flex;
   align-items: center;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 200;
   cursor: pointer;
 }
@@ -157,6 +160,7 @@ body {
 }
 
 .moreInfoAboutStreamersDiv {
+  grid-area: moreInfo;
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 10px;
@@ -189,7 +193,7 @@ b {
 }
 
 .streamerBio {
-
+  grid-area: bio;
 }
 
 /* Responsive Design */
@@ -210,7 +214,16 @@ b {
 
   .streamerDiv {
     margin-top: 215px;
-    width: 65%;
+    width: 55%;
+  }
+
+  .streamerList {
+    grid-template:
+      [row1-start] "logo displayName" 100px [row1-end]
+      [row2-start] "logo onlineStatus" auto [row2-end]
+      [row3-start] "logo moreInfoButton" auto [row3-end]
+      [row4-start] "moreInfo moreInfo" auto [row4-end]
+      / 35% 50%;
   }
 
   .streamerName {
@@ -235,6 +248,7 @@ b {
 
   .streamerDiv {
     margin-top: 230px;
+    width: 50%;
   }
 
 }
