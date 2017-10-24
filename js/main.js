@@ -16,10 +16,8 @@ var ajaxCall = function (section, file) {
     }
   };
 
-
-
-
   xhr.open('GET', file);
+
   xhr.send(null);
 };
 
@@ -37,6 +35,7 @@ var sections = {
       sectionDiv.removeChild(sectionDiv.lastChild);
     }
     sectionDiv.appendChild(sectionHTML);
+    playVideoOnHover();
   },
 
   contact: function(sectionHTML) {
@@ -58,7 +57,6 @@ for (var i = 0; i < sectionLinkClicked.length; i++) {
     } else if (this.classList.contains('projects-link')) {
       if (window.innerWidth > 991) {
         ajaxCall(sections.projects, 'html/projects-large.html')
-        testingTesting();
       } else {
         ajaxCall(sections.projects, 'html/projects-small-and-med.html');
       }
@@ -77,12 +75,12 @@ var loadProjectPageByScreenSize = function() {
       ajaxCall(sections.projects, 'html/projects-small-and-med.html');
     }
   }
-};
+}
 
 window.addEventListener('resize', loadProjectPageByScreenSize, false);
 
 
-function testingTesting() {
+function playVideoOnHover() {
 
   var projectVideos = document.querySelectorAll('.project-vids');
   console.log(projectVideos);
@@ -90,14 +88,11 @@ function testingTesting() {
   for (var i = 0; i < projectVideos.length; i++) {
 
     projectVideos[i].addEventListener('mouseenter', function() {
-      console.log('play');
       this.play();
-
     });
 
     projectVideos[i].addEventListener('mouseout', function() {
-      console.log('pause');
       this.pause();
-    })
+    });
   }
 }
