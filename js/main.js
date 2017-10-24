@@ -83,7 +83,6 @@ window.addEventListener('resize', loadProjectPageByScreenSize, false);
 function playVideoOnHover() {
 
   var projectVideos = document.querySelectorAll('.project-vids');
-  console.log(projectVideos);
 
   for (var i = 0; i < projectVideos.length; i++) {
 
