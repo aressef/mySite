@@ -9,7 +9,7 @@ var ajaxCall = function (section, file) {
       if (xhr.status === 200) {
         var sectionDivHTML = document.createRange().createContextualFragment(xhr.responseText);
         section(sectionDivHTML);
-        isProjectsSelected = sectionDiv.firstElementChild;
+        isProjectsSelected = sectionDivHTML.firstElementChild;
       } else {
         console.log('Error: ' + xhr.status);
       }
