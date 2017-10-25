@@ -81,7 +81,10 @@ body {
   -webkit-box-align: center;
   align-items: center;
   justify-content: center;
+}
 
+.sections-nav-items:last-child {
+  margin-right: 5px;
 }
 
 .section-displayed-div {
