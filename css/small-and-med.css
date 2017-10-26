@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 
+.container {max-width:100%;}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +23,7 @@ body {
   top: 0;
   position: fixed;
   background-color: #f4f4f4;
-  height: 40px;
+  height: 6vh;
   width: 100%;
   padding-top: 5px;
   z-index: 1;
@@ -29,22 +31,26 @@ body {
 
 .nav-bar-header {
   font-family: 'Rock Salt', cursive;
-  font-size: 20px;
-  margin-left: 20px;
+  font-size: 5.5vmin;
+  margin-left: 2.5vh;
+  padding-bottom: 1vw;
 }
 
 .nav-bar-ul {
   list-style: none;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
   list-style-type: none;
-  padding-top: 15px;
-  margin-right: 5px;
+  margin-right: 1vh;
+  margin-bottom: 0;
 }
 
 .nav-bar-items {
-  margin-left: 5px;
-  margin-right: 10px;
-  font-size: 14px;
+  margin-left: 1vh;
+  margin-right: 1.5vh;
+  font-size: 3vmin;
 }
 
 .main-container {
@@ -57,7 +63,7 @@ body {
 .sections-nav-div {
   position: fixed;
   bottom: 0%;
-  height: 50px;
+  height: 10vw;
   width: 100%;
   background-color: #f4f4f4;
   font-size: 16px;
@@ -105,6 +111,7 @@ body {
 
 .about {
   height: 60vh;
+  max-width: 95%;
 }
 
 .about-h1 {
@@ -112,8 +119,16 @@ body {
   font-size: 12vmin;
 }
 
-.about-p {
-  font-size: 5vmin;
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+}
+
+ .about-p {
+  font-size: 6vmin;
   font-weight: 300;
 }
 
@@ -125,6 +140,13 @@ body {
   margin-top: 10px;
   margin-bottom:20px;
   text-align: center;
+}
+
+.projects-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-li {
@@ -154,7 +176,7 @@ hr {
 }
 
 .project-images {
-  width: 100%;
+  max-width: 412px;
   box-shadow: 1px 1px 1px 1px #888888;
 }
 
@@ -163,12 +185,46 @@ hr {
   height: 70vh;
 }
 
+
+@media screen and (min-width: 400px) {
+  
+  .nav-bar-container {
+    height: 6.5vw;
+  }
+
+  .nav-bar-header {
+    font-size: 4vmin;
+  }
+
+  .nav-bar-items {
+    font-size: 2.5vmin;
+  }
+
+  .sections-nav-div {
+    height: 6.5vw;
+  }
+
+  .about-h1 {
+    font-size: 10vmin;
+  }
+
+  .about-p {
+    font-size: 5vmin;
+  }
+
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 
+  .nav-bar-container {
+    height: 5vw;
+  }
+
   .nav-bar-header {
-    font-size: 22px;
+    font-size: 3.5vmin;
     margin-left: 30px;
+    padding-top: .5vw;
   }
 
   .nav-bar-ul {
@@ -177,15 +233,20 @@ hr {
 
   .nav-bar-items {
     margin-right: 20px;
+    font-size: 2.5vmin;
   }
 
   .sections-nav-div {
-    height: 50px;
-    font-size: 24px;
+    height: 5vw;
+    font-size: 3vmin;
+  }
+
+  .about {
+    max-width: 80%;
   }
 
   .project-images {
-    width: 90%;
+    width: 70vh;
   }
 
   .contact-form {
