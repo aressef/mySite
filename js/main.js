@@ -27,9 +27,6 @@ var displaySection = {
   }
 };
 
-
-var sectionLinkClicked = document.querySelectorAll('.js-sections-link');
-
 var ajax = {
   // AJAX request for sections html
   ajaxCall: function (section, file) {
@@ -100,17 +97,25 @@ var style = {
   highLightSection: function() {
     for (var i = 0; i < sectionLinkClicked.length; i++) {
       sectionLinkClicked[i].addEventListener('click', function() {
-    
-        if (this.classList.contains('about-link')) {
-          this.classList.add('');
-        } else if (this.classList.contains('projects-link')) {
-          if (window.innerWidth > 991) {
-            this.classList.add('');
+        var parentClasses = this.parentElement.classList;
+        
+        // Removes section-selected class from all before adding to section clicked
+        for (var j = 0; j < sectionLinkClicked.length; j++) {
+          if (sectionLinkClicked[j].parentElement.classList.contains('section-selected')) {
+            sectionLinkClicked[j].parentElement.classList.remove('section-selected');
           } else {
-            this.classList.add('');
+            console.log('nope');
           }
-        } else if (this.classList.contains('contact-link')) {
-          this.classList.add('');
+        }
+        
+        if (window.innerWidth > 991) {
+          if (this.classList.contains('about-link') && !parentClasses.contains('section-selected')) {
+            parentClasses.toggle('section-selected');
+          } else if (this.classList.contains('projects-link') && !parentClasses.contains('section-selected')) {
+            parentClasses.toggle('section-selected');
+          } else if (this.classList.contains('contact-link') && !parentClasses.contains('section-selected')) {
+            parentClasses.toggle('section-selected');
+          }
         }
     
       });
@@ -119,7 +124,10 @@ var style = {
 }
 
 
+var sectionLinkClicked = document.querySelectorAll('.sections-link');
+
 // window.addEventListener('click', function, false);
 window.addEventListener('resize', ajax.loadProjectPageByScreenSize, false);
 
 ajax.requestSectionOnClick();
+style.highLightSection();
