@@ -3,7 +3,6 @@
 
 /* CSS file for Local Weather App  */
 html, body {
-  height: 85%;
   margin: 0;
 }
 
@@ -11,10 +10,12 @@ html, body {
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  flex-direction: column;
   justify-content: -ms-center;
   -webkit-justify-content: center;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-direction: column;
 
   background: #0097A7;
@@ -25,6 +26,7 @@ html, body {
 h1 {
   color: #FFF;
   font-weight: 100;
+  margin-top: 10vh;
 }
 
 .weatherBox {

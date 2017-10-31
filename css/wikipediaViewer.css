@@ -4,7 +4,7 @@ body {
   font-family: Catamaran;
   text-align: center;
   margin: auto;
-  width: 80%;
+  width: 100;
   padding-bottom: 30px;
 }
 
@@ -76,4 +76,23 @@ li {
 
 .snippet {
   font-size: 20px;
+}
+
+
+@media screen and (max-width: 991px) {
+  .resultContainer {
+    width: 90%;
+  }
+
+  .indResult ul {
+    padding-left: 0;
+  }
+
+  .title {
+    font-weight: 300;
+  }
+
+  .searchResultLink {
+    color: #000;
+  }
 }
