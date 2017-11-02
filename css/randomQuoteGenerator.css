@@ -54,6 +54,15 @@ body {
   color: #00aced;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
+button:hover {
+  font-size: 1em;
+}
+
 
 @media screen and (max-width: 991px) {
 

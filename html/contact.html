@@ -1,17 +1,17 @@
 <div class="contact">
   <h1 class="contact-h1">Let's Connect</h1>
-  <form class="contact-form">
+  <form class="contact-form" action="../form-to-email.php" method="post">
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter name">
+      <input type="text" class="form-control" name="user_name" placeholder="Enter name">
     </div>
     <div class="form-group">
       <label for="email-address">Email address</label>
-      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+      <input type="email" class="form-control" name="user_email" placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="comments">Comments</label>
-      <textarea type="text" class="form-control" rows="4" placeholder="What would you like to tell me?"></textarea>
+      <textarea type="text" class="form-control" name="user_message" rows="6" placeholder="What would you like to tell me?"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Send</button>
   </form>
