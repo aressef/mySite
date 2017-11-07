@@ -22,18 +22,18 @@ body {
   align-content: space-between;
   top: 0;
   position: fixed;
-  background-color: #ffffff;
-  height: 6vh;
+  background-color: #24292e;
+  height: 40px;
   width: 100%;
-  padding-top: 1.5vh;
+  padding-top: 5px;
   z-index: 1;
 }
 
 .nav-bar-header {
-  font-family: 'Rock Salt', cursive;
-  font-size: 5.5vmin;
+  font-size: 28px;
+  font-weight: 400;
   margin-left: 2.5vh;
-  padding-bottom: 1vw;
+  color: #fff;
 }
 
 .nav-bar-ul {
@@ -51,6 +51,10 @@ body {
   margin-left: 1vh;
   margin-right: 1.5vh;
   font-size: 3vmin;
+}
+
+.nav-bar-icons {
+  color: #fff;
 }
 
 .main-container {
@@ -94,6 +98,8 @@ body {
 
 .section-displayed-div {
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .about, .projects, .contact {
@@ -105,11 +111,8 @@ body {
   font-size: 10vmin;
 }
 
-/* .about {} */
-
 .about-h1 {
   margin-bottom: 20px;
-  font-size: 12vmin;
 }
 
 .about-bio {
@@ -121,7 +124,7 @@ body {
 }
 
  .about-p {
-  font-size: 6vmin;
+  font-size: 20px;
   font-weight: 300;
 }
 
@@ -132,7 +135,6 @@ body {
 .projects-h1 {
   margin-top: 10px;
   margin-bottom:20px;
-  text-align: center;
 }
 
 .projects-nav {
@@ -230,8 +232,16 @@ hr {
     font-size: 3vmin;
   }
 
+  .about-h1, .projects-h1, .connect-h1 {
+    font-size: 8vmin;
+  }
+
   .about {
     max-width: 80%;
+  }
+
+  .about-p {
+    font-size: 4vmin;
   }
 
   .project-images {

@@ -24,17 +24,18 @@ body {
     align-content: space-between;
     top: 0;
     position: fixed;
-    height: 5vh;
+    height: 45px;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 5px;
     z-index: 1;
-    background-color: #FFF;
+    background-color: #24292e;
 }
   
 .nav-bar-header {
-    font-family: 'Rock Salt', cursive;
-    font-size: 3vmin;
-    margin-left: 1em;
+    font-size: 32px;
+    margin-left: 5%;
+    color: #fff;
+    font-weight: 400;
 }
 
 .nav-bar-ul {
@@ -42,12 +43,16 @@ body {
     display: flex;
     list-style-type: none;
     padding-top: 15px;
-    margin-right: 15px;
+    margin-right: 5%;
 }
   
 .nav-bar-items {
     margin-right: 1em;
     margin-left: 1em;
+}
+
+.nav-bar-icons {
+    color: #fff;
 }
 
 .sections-nav-div {
@@ -63,7 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 25vh;
-    font-size: 3vmin;
+    font-size: 22px;
     font-weight: 100;
     color: #7D8587;
   }
@@ -96,7 +101,7 @@ body {
 
 .about, .projects, .contact {
     margin-top: 10vh;
-    max-width: 940px;
+    max-width: 740px;
     min-width: 60%;
 }
 
@@ -107,7 +112,7 @@ body {
 }
 
 .about-p {
-    font-size: 2.5vmin;
+    font-size: 20px;
     font-weight: 300;
     line-height: 2;
 }
