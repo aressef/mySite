@@ -55,6 +55,14 @@ body {
     color: #fff;
 }
 
+.nav-bar-icons:link {
+    text-decoration: none;
+}
+
+.nav-bar-icons:hover {
+    color: #f04e23;
+}
+
 .sections-nav-div {
     display: flex;
     align-items: center;
@@ -71,6 +79,7 @@ body {
     font-size: 22px;
     font-weight: 100;
     color: #7D8587;
+    position: fixed;
   }
 
 .sections-link {
@@ -120,7 +129,7 @@ body {
 .projects-nav {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    width: 1000px;
 }
 
 .projects li:first-child {
@@ -129,15 +138,20 @@ body {
 
 .project-name {
     font-weight: 300;
-    font-size: 2.5vmin;
+    font-size: 24px;
 }
 
 .project-vids {
     box-shadow: 1px 1px 2px 2px #888888;
-    max-width: 20vw;
-    margin-bottom: 2vw;
+    max-width: 275px;
+    margin-bottom: 20px;
 }
 
 .contact-form {
     font-size: 3vmin;
+}
+
+
+@media screen and (min-width: 768px) {
+
 }

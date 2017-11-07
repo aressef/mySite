@@ -93,31 +93,29 @@ var style = {
       });
     }
   },
-  // Section that is selected is made bold / others will be faded
+  // Section that is selected is made black others will be faded-greyed
   highLightSection: function() {
-    if (window.innerWidth > 991) {
-      for (var i = 0; i < sectionLinkClicked.length; i++) {
-        sectionLinkClicked[i].addEventListener('click', function() {
-          var parentClasses = this.parentElement.classList;
-          
-          // Removes section-selected class from all before adding to section clicked
-          for (var j = 0; j < sectionLinkClicked.length; j++) {
-            if (sectionLinkClicked[j].parentElement.classList.contains('section-selected')) {
-              sectionLinkClicked[j].parentElement.classList.remove('section-selected');
-            }
+    for (var i = 0; i < sectionLinkClicked.length; i++) {
+      sectionLinkClicked[i].addEventListener('click', function() {
+        var parentClasses = this.parentElement.classList;
+        
+        // Removes section-selected class from all before adding to section clicked
+        for (var j = 0; j < sectionLinkClicked.length; j++) {
+          if (sectionLinkClicked[j].parentElement.classList.contains('section-selected')) {
+            sectionLinkClicked[j].parentElement.classList.remove('section-selected');
           }
-          
-          if (this.classList.contains('about-link') && !parentClasses.contains('section-selected')) {
-            parentClasses.toggle('section-selected');
-          } else if (this.classList.contains('projects-link') && !parentClasses.contains('section-selected')) {
-            parentClasses.toggle('section-selected');
-          } else if (this.classList.contains('contact-link') && !parentClasses.contains('section-selected')) {
-            parentClasses.toggle('section-selected');
-          }
-      
-        });
-      } 
-    }
+        }
+        
+        if (this.classList.contains('about-link') && !parentClasses.contains('section-selected')) {
+          parentClasses.toggle('section-selected');
+        } else if (this.classList.contains('projects-link') && !parentClasses.contains('section-selected')) {
+          parentClasses.toggle('section-selected');
+        } else if (this.classList.contains('contact-link') && !parentClasses.contains('section-selected')) {
+          parentClasses.toggle('section-selected');
+        }
+    
+      });
+    } 
   }
 }
 
