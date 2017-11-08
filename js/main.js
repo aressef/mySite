@@ -60,7 +60,7 @@ var ajax = {
             ajax.ajaxCall(displaySection.projects, 'html/projects-small-and-med.html');
           }
         } else if (this.classList.contains('contact-link')) {
-          ajax.ajaxCall(displaySection.contact, 'html/contact.html');
+          ajax.ajaxCall(displaySection.contact, 'html/php/contact.php');
         }
     
       });

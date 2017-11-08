@@ -151,6 +151,14 @@ body {
     font-size: 3vmin;
 }
 
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
 
 @media screen and (min-width: 768px) {
 
