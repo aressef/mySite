@@ -1,8 +1,7 @@
 <?php 
-
 // define variables and set to empty values
-$name_error = $email_error = $phone_error = $url_error = "";
-$name = $email = $phone = $message = $url = $success = "";
+$name_error = $email_error = $subject_error = $message_error = "";
+$name = $email = $subject = $message = $success = "";
 
 //form is submitted with POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $name_error = "Only letters and white space allowed"; 
+      $name_error = "Only letters and spaces allowed"; 
     }
   }
 
@@ -31,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $subject = test_input($_POST["subject"]);
   }
-  
 
   if (empty($_POST["message"])) {
     $message_error = "Don't you want to tell me something?";
@@ -46,9 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $message_body .= "$key: $value\n";
     }
 
-    $to = 'ryan@rfuhrman.com';
-    $subject = 'Contact Form Submit';
-    if (mail($to, $subject, $message)){
+    $to = 'rsfuhrman10@gmail.com';
+    if (mail($to, $subject, $message_body)){
       $success = "Message sent, thank you for reaching out!";
       $name = $email = $subject = $message = '';
     }
@@ -62,3 +59,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
+header('Location: ../index.html');
+
+?>
